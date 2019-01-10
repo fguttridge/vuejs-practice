@@ -21,6 +21,28 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: "/help",
+      name: "help",
+      component: () => import("./views/Help.vue"),
+      children: [
+        {
+          path: "date",
+          name: "date",
+          components: {
+            helper: () => import("./components/DateDisplay.vue")
+          }
+        },
+        {
+          path: "dumb",
+          name: "dumb",
+          components: {
+            default: () => import("./views/Help.vue"),
+            helper: () => import("./views/Dumb.vue")
+          }
+        }
+      ]
     }
   ]
 });
