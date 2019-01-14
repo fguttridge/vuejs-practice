@@ -23,6 +23,11 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
+      path: "/layouts/layout-one",
+      name: "layout-one",
+      component: () => import("./views/LayoutOne.vue")
+    },
+    {
       path: "/help",
       name: "help",
       component: () => import("./views/Help.vue"),

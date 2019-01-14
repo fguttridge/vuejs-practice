@@ -1,13 +1,15 @@
 <template>
   <div class="help">
-      <p>This is a help class</p>
-      <nav>
+      <div class="page-nav">
         <router-link to="/help/dumb"><button class="nav-button">Dumb</button></router-link>
         <router-link to="/help/date"><button class="nav-button">Date</button></router-link>
-      </nav>
-      <keep-alive>
-        <router-view class="helper" name="helper"/>
-      </keep-alive>
+      </div>
+      <div class="help-view-port">
+        <p>Simple page state caching example</p>
+        <keep-alive>
+          <router-view class="helper" name="helper"/>
+        </keep-alive>
+      </div>
   </div>
 </template>
 
@@ -46,5 +48,14 @@ nav {
 .nav-button {
   width: 100%;
   background-color: #42b983;
+}
+.page-nav {
+  width: 10%;
+  height: 100%;
+  float: right;
+  position: fixed;
+}
+.help-view-port {
+  text-align: center;
 }
 </style>
