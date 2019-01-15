@@ -15,9 +15,24 @@
                 </div>
             </div>
         </b-card>
-        <b-card no-body class="text-center">
+        <div class="content-body">
+          <b-card-group deck class="mb-2">
+          <b-card class="text-center" header="Card">
+              some text
+          </b-card>
+          <b-card class="text-center" header="Card">
             some text
-        </b-card>
+          </b-card>
+          </b-card-group>
+          <b-card-group>
+            <b-card overlay
+            img-src="/images/skyline.jpg"
+            img-alt="Card Image"
+            title="This is an Image Card"
+            class="image-card mb-4">
+            </b-card>
+          </b-card-group>
+        </div>
     </div>
 </template>
 
@@ -27,9 +42,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #layout-one {
   text-align: center;
+  overflow: auto;
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-radius: 10px;
+  border-color: #8E7B7B;
+  background-color: map-get($layoutOne, backgroundColor);
+  padding: 0;
+  color: map-get($layoutOne, textBodyColor);
 }
 .video-back {
   height: 50vh;
@@ -70,5 +93,27 @@ export default {
   width: 100%;
   background-color: black;
   opacity: 0.5;
+}
+.content-body {
+  .card {
+  margin-top: 2em !important;
+  background-color: map-get($layoutOne, cardColor);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)
+  }
+  .card-header {
+    background-color: map-get($layoutOne, highlight);
+    color: map-get($layoutOne, backgroundColor);
+  }
+}
+.content-body {
+  padding: 1em 1em 1em 1em;
+}
+.image-card {
+  color: map-get($layoutOne, backgroundColor) !important;
+  width: 50%;
+  max-width:20rem;
+  img {
+    opacity: 0.9;
+  }
 }
 </style>

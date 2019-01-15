@@ -3,7 +3,7 @@
     <b-navbar id="nav" type="light" variant="success" toggleable="md">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand href="#">Brand Name</b-navbar-brand>
-        <b-navbar-nav>
+        <b-navbar-nav class="navigation-menu">
             <b-nav-item to="/">Home</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
             <b-nav-item to="/help">Help</b-nav-item>
@@ -25,9 +25,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #nav {
   width: 100%;
-  height: 10%;
+  height: 5%;
+  background-color: map-get($theme, primary) !important;
+}
+.navigation-menu {
+  background-color: map-get($theme, primary) !important;
+  color: map-get($theme, textBodyColor) !important;
 }
 </style>

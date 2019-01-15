@@ -23,16 +23,19 @@ export default {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: map-get($theme, textBodyColor);
+  background-color: map-get($theme, backgroundColor);
   width: 100%;
+  min-height: 100%;
+  height: 100%;
 }
 #nav {
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: map-get($theme, textBodyColor);
     &.router-link-exact-active {
-      color: #42b983;
+      color: map-get($theme, linkSelected);
     }
   }
 }
@@ -44,5 +47,10 @@ export default {
   padding-bottom: 2%;
   padding-left: 2%;
   padding-right: 2%;
+}
+html {
+  min-height: 100%;
+  color: map-get($theme, textBodyColor);
+  background-color: map-get($theme, backgroundColor);
 }
 </style>
