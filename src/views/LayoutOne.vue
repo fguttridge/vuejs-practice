@@ -3,7 +3,7 @@
         <b-card no-body class="text-center video-back">
             <div class="overlay">
               <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                <source src="/stars.mp4" type="video/mp4">
               </video>
             </div>
             <div class="video-container h-100">
@@ -94,7 +94,7 @@ export default {
   max-width: 100%;
   top: 50%;
   left: 50%;
-  width: auto;
+  width: 100%;
   height: auto;
   z-index: 0;
   -ms-transform: translateY(-25%);
@@ -171,23 +171,4 @@ export default {
       padding-bottom: 0.5rem;
     }
 }
-  /* width */
-    ::-webkit-scrollbar {
-    width: 5px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: map-get($theme, primary)
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-    background: map-get($theme, highlight); 
-    }
 </style>
