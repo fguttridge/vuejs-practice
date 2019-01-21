@@ -118,7 +118,7 @@ export default {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 1;
 }
 .content-body {
   .card {
@@ -136,7 +136,7 @@ export default {
   width: 50%;
   max-width:20rem;
   img {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 .row-showcase {

@@ -5,7 +5,8 @@
         <router-link to="/help/date"><button class="nav-button">Date</button></router-link>
       </div>
       <div class="help-view-port">
-        <p>Simple page state caching example</p>
+        <p>Simple page state caching & http request example</p>
+        <div class="http-test"><HttpTest/></div>
         <keep-alive>
           <router-view class="helper" name="helper"/>
         </keep-alive>
@@ -14,8 +15,13 @@
 </template>
 
 <script>
+import HttpTest from "@/components/HttpTest.vue";
+
 export default {
   name: "help",
+  components: {
+    HttpTest
+  },
   methods: {
     storeState(url) {
       this.$store.dispatch("changeHelpRoute", { newRoute: url });
@@ -56,6 +62,13 @@ nav {
   position: fixed;
 }
 .help-view-port {
+  display: block;
   text-align: center;
+  align-content: center;
+}
+.http-test {
+  display: block;
+  align-self: center;
+  padding: 0 30rem 0 30rem;
 }
 </style>
