@@ -1,15 +1,15 @@
 <template>
   <div id="app-header">
-    <b-navbar id="nav" type="light" variant="success" toggleable="md">
+    <b-navbar id="nav" variant="success" toggleable="md">
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
         <b-navbar-brand href="#">Brand Name</b-navbar-brand>
         <b-navbar-nav class="navigation-menu">
             <b-nav-item to="/">Home</b-nav-item>
             <b-nav-item to="/about">About</b-nav-item>
             <b-nav-item to="/help">Help</b-nav-item>
-            <b-nav-item-dropdown text="Layouts" right>
+            <b-nav-item-dropdown text="Layouts" right class="nav-dropdown">
               <b-dropdown-item to="/layouts/layout-one">Layout 1</b-dropdown-item>
-              <b-dropdown-item href="#">Layout 2</b-dropdown-item>
+              <b-dropdown-item to="/layouts/layout-two">Layout 2</b-dropdown-item>
               <b-dropdown-item href="#">Layout 3</b-dropdown-item>
               <b-dropdown-item href="#">Layout 4</b-dropdown-item>
             </b-nav-item-dropdown>
@@ -25,7 +25,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<!-- Don't scope css to change bootstrap view functionality -->
+<style lang="scss">
 #nav {
   width: 100%;
   height: 5%;
@@ -35,4 +36,11 @@ export default {
   background-color: map-get($theme, primary) !important;
   color: map-get($theme, textBodyColor) !important;
 }
+.dropdown-menu {
+  background-color: map-get($layoutOne, secondary) !important;
+  :hover {
+    background-color: map-get($layoutOne, highlight) !important;
+  }
+}
+
 </style>
