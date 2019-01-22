@@ -1,3 +1,9 @@
+# Vuejs Setup
+
+1. Install node from official site
+2. Install the view CLI as can be found on their site https://cli.vuejs.org
+3. All CLI commands called from npm should now work with the project
+
 # webpack-test
 
 ## Project setup

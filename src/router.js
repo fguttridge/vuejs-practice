@@ -33,6 +33,11 @@ export default new Router({
       component: () => import("./views/LayoutTwo.vue")
     },
     {
+      path: "/layouts/layout-three",
+      name: "layout-three",
+      component: () => import("./views/LayoutThree.vue")
+    },
+    {
       path: "/help",
       name: "help",
       component: () => import("./views/Help.vue"),
