@@ -44,6 +44,9 @@
                                         required
                                         placeholder="Enter Amount in $"
                                         class="form-input"/>
+                    <div class="divider-grey"/>                    
+                    <b-button type="submit" variant="primary">Submit</b-button>
+                    <b-button type="reset" variant="danger">Reset</b-button>
                     </b-form>
                     </div>
                 </b-card>
