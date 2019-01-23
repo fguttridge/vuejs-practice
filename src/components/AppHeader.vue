@@ -10,8 +10,8 @@
             <b-nav-item-dropdown text="Layouts" right class="nav-dropdown">
               <b-dropdown-item to="/layouts/layout-one">Layout 1</b-dropdown-item>
               <b-dropdown-item to="/layouts/layout-two">Layout 2</b-dropdown-item>
-              <b-dropdown-item href="/layouts/layout-three">Layout 3</b-dropdown-item>
-              <b-dropdown-item href="#">Layout 4</b-dropdown-item>
+              <b-dropdown-item to="/layouts/layout-three">Layout 3</b-dropdown-item>
+              <b-dropdown-item to="/layouts/layout-four">Layout 4</b-dropdown-item>
             </b-nav-item-dropdown>
         </b-navbar-nav>
     </b-navbar>

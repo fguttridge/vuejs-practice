@@ -10,10 +10,10 @@
                         <h4>Dashboard</h4>
                         <div class="arrow-left" v-if="active == 'LayoutThree'"></div>
                     </div>
-                    <div class="nav-item">
-                        <Payment class="dashboard-svg"/>
+                    <div class="nav-item" v-bind:class="{'nav-item-selected': this.active === 'LayoutFour'}" v-on:click="active = 'LayoutFour'">
+                        <Payment class="dashboard-svg" v-bind:class="{'nav-item-selected': this.active === 'LayoutFour'}"/>
                         <h4>Pay</h4>
-                        <div class="arrow-left" hidden></div>
+                        <div class="arrow-left" v-if="active == 'LayoutFour'"></div>
                     </div>
                     <span class="nav-item">
                         <User class="dashboard-svg"/>
@@ -35,8 +35,9 @@
 </template>
 
 <script>
-import LayoutThree from '@/views/LayoutThree.vue';
 import LayoutOne from '@/views/LayoutOne.vue'
+import LayoutThree from '@/views/LayoutThree.vue';
+import LayoutFour from '@/views/LayoutFour.vue'
 import Landing from '@/assets/landing-page.svg';
 import User from '@/assets/man.svg';
 import Payment from '@/assets/payment.svg';
@@ -45,8 +46,9 @@ import Heart from '@/assets/heart.svg';
 export default {
   name: "layout-two",
   components: {
-      LayoutThree,
       LayoutOne,
+      LayoutThree,
+      LayoutFour,
       Landing,
       User,
       Payment,
@@ -79,7 +81,7 @@ export default {
   padding: 0;
   color: map-get($layoutOne, textBodyColor);
 }
-#layout-one, #layout-three {
+#layout-one, #layout-three, #layout-four {
     border-style: none !important;
     background-color: map-get($layoutTwo, backgroundColor) !important;
 }

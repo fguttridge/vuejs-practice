@@ -38,6 +38,11 @@ export default new Router({
       component: () => import("./views/LayoutThree.vue")
     },
     {
+      path: "/layouts/layout-four",
+      name: "layout-four",
+      component: () => import("./views/LayoutFour.vue")
+    },
+    {
       path: "/help",
       name: "help",
       component: () => import("./views/Help.vue"),
