@@ -6,7 +6,7 @@
             <b-container fluid class="fixed-padding-container">
             <b-card-group deck class="mb-2">
             <b-col cols="4">
-                <b-card class="text-center" header="Your Info">    
+                <b-card class="text-center">    
                     <b-row class="full-width">
                         <b-col cols="6">
                         <strong>Username </strong>
@@ -23,27 +23,36 @@
                             $1,234.00
                         </b-col>
                     </b-row>
+                    <b-row class="full-width">
+                        <b-col cols="6">
+                        <strong>Public Key </strong>
+                        </b-col>
+                        <b-col cols="6">
+                            ABXZ0019ASKZ
+                        </b-col>
+                    </b-row>
                 </b-card>
             </b-col>
             <b-col cols="8">
-                <b-card class="text-center" header="Transfer Form"> 
+                <b-card class="text-center"> 
                     <div class="form-left-align">
                     <b-form >
-                        <b-form-group id="exampleInputGroup1"
+                        <b-form-group id="send-to"
                                         label="Send To:"
-                                        label-for="exampleInput1"/>
-                        <b-form-input id="exampleInput1"
+                                        label-for="send-to"/>
+                        <b-form-input id="user-id"
                                         required
+                                        label-for="user-id"
                                         placeholder="Enter User ID"
                                         class="form-input"/>
-                        <b-form-group id="exampleInputGroup1"
+                        <b-form-group id="amount"
                                         label="Amount:"
-                                        label-for="exampleInput1"/>
+                                        label-for="amount"/>
                         <b-form-input id="exampleInput1"
                                         type="number"
                                         required
                                         placeholder="Enter Amount in $"
-                                        class="form-input"/>
+                                        class="form-input form-bottom"/>
                     <div class="divider-grey"/>                    
                     <b-button type="submit" variant="primary">Submit</b-button>
                     <b-button type="reset" variant="danger">Reset</b-button>
@@ -82,12 +91,13 @@ export default {
 .content-body {
   .card {
   margin-top: 2em !important;
-  background-color: map-get($layoutOne, cardColor);
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)
+  border: 1px solid map-get($layoutOne, cardColor);
+  background-color: map-get($layoutTwo, cardColor);
+  box-shadow: 6px 8px 8px 5px rgba(0, 0, 0, 0.2), 8px 10px 20px 0 rgba(0, 0, 0, 0.19)
   }
   .card-header {
-    background-color: map-get($layoutOne, highlight);
-    color: map-get($layoutOne, backgroundColor);
+    background-color: map-get($layoutTwo, highlight);
+    color: map-get($layoutTwo, backgroundColor);
   }
 }
 .full-width {
@@ -98,7 +108,7 @@ export default {
     margin-bottom: 2rem;
 }
 .divider-grey {
-  background-color: map-get($layoutTwo, cardColor);
+  background-color: map-get($layoutTwo, dividerColor);
   height: 3px;
   width: 100%;
   min-width:100%;
@@ -112,6 +122,9 @@ export default {
 }
 .form-input {
     width: 50%;
+}
+.form-bottom {
+    margin-bottom: 1rem;
 }
 .fixed-padding-container {
     padding-left: 5rem;

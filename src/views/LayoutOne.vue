@@ -129,16 +129,16 @@ export default {
 .content-body {
   .card {
   margin-top: 2em !important;
-  background-color: map-get($layoutOne, cardColor);
+  background-color: map-get($layoutTwo, backgroundColor);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)
   }
   .card-header {
-    background-color: map-get($layoutOne, highlight);
+    background-color: map-get($layoutTwo, highlight);
     color: map-get($layoutOne, backgroundColor);
   }
 }
 .image-card {
-  color: map-get($layoutOne, backgroundColor) !important;
+  color: map-get($layoutTwo, backgroundColor) !important;
   width: 50%;
   max-width:20rem;
   img {

@@ -4,13 +4,19 @@
         <h3 class="heading">Dashboard</h3>
         <div class="divider-grey"/>
         <b-card-group deck class="mb-2">
-          <b-card class="text-center" header="Card">
+          <b-card class="text-center">
+            <h5>Card Layout</h5>
+            <div class="divider-grey"/>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper ipsum ut suscipit rutrum. Donec eu aliquet odio. Phasellus commodo euismod elit, eget efficitur est pretium ut. Nunc porttitor ligula vitae urna viverra, nec sollicitudin dolor porttitor. Mauris pellentesque felis vel imperdiet tincidunt. Nunc et pretium tortor. Aenean in placerat justo. Quisque congue turpis ac tellus molestie vestibulum quis id sapien. Nam pharetra, erat in euismod ultrices, urna nibh elementum velit, sed dictum diam lacus nec nulla. Nunc aliquet augue vestibulum enim viverra lacinia."
           </b-card>
-          <b-card class="text-center" header="Card">
+          <b-card class="text-center">
+            <h5>Card Layout</h5>
+            <div class="divider-grey"/>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper ipsum ut suscipit rutrum. Donec eu aliquet odio. Phasellus commodo euismod elit, eget efficitur est pretium ut. Nunc porttitor ligula vitae urna viverra, nec sollicitudin dolor porttitor. Mauris pellentesque felis vel imperdiet tincidunt. Nunc et pretium tortor. Aenean in placerat justo. Quisque congue turpis ac tellus molestie vestibulum quis id sapien. Nam pharetra, erat in euismod ultrices, urna nibh elementum velit, sed dictum diam lacus nec nulla. Nunc aliquet augue vestibulum enim viverra lacinia."
           </b-card>
-          <b-card class="text-center" header="Card">
+          <b-card class="text-center">
+            <h5>Card Layout</h5>
+            <div class="divider-grey"/>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper ipsum ut suscipit rutrum. Donec eu aliquet odio. Phasellus commodo euismod elit, eget efficitur est pretium ut. Nunc porttitor ligula vitae urna viverra, nec sollicitudin dolor porttitor. Mauris pellentesque felis vel imperdiet tincidunt. Nunc et pretium tortor. Aenean in placerat justo. Quisque congue turpis ac tellus molestie vestibulum quis id sapien. Nam pharetra, erat in euismod ultrices, urna nibh elementum velit, sed dictum diam lacus nec nulla. Nunc aliquet augue vestibulum enim viverra lacinia."
           </b-card>
           </b-card-group>
@@ -49,16 +55,16 @@ export default {
 .content-body {
   .card {
   margin-top: 2em !important;
-  background-color: map-get($layoutOne, cardColor);
+  background-color: map-get($layoutTwo, backgroundColor);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19)
   }
   .card-header {
-    background-color: map-get($layoutOne, highlight);
-    color: map-get($layoutOne, backgroundColor);
+    background-color: map-get($layoutTwo, highlight);
+    color: map-get($layoutTwo, backgroundColor);
   }
 }
 .divider-grey {
-  background-color: map-get($layoutTwo, cardColor);
+  background-color: map-get($layoutTwo, dividerColor);
   height: 3px;
   width: 100%;
   min-width:100%;

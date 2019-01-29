@@ -143,7 +143,7 @@ div.this.container {
     fill: map-get($layoutTwo, backgroundColor); 
 }
 .divider-grey {
-  background-color: map-get($layoutTwo, cardColor);
+  background-color: map-get($layoutTwo, dividerColor);
   height: 3px;
   width: 85%;
   min-width:85%;
