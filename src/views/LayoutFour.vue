@@ -37,25 +37,27 @@
                 <b-card class="text-center"> 
                     <div class="form-left-align">
                     <b-form >
-                        <b-form-group id="send-to"
+                        <b-form-group id="user-id-group"
                                         label="Send To:"
                                         label-for="send-to"/>
                         <b-form-input id="user-id"
                                         required
                                         label-for="user-id"
                                         placeholder="Enter User ID"
-                                        class="form-input"/>
-                        <b-form-group id="amount"
+                                        class="form-input"
+                                        v-model="userId"/>
+                        <b-form-group id="amount-group"
                                         label="Amount:"
                                         label-for="amount"/>
-                        <b-form-input id="exampleInput1"
+                        <b-form-input id="amount"
                                         type="number"
                                         required
                                         placeholder="Enter Amount in $"
-                                        class="form-input form-bottom"/>
+                                        class="form-input form-bottom"
+                                        v-model="amount"/>
                     <div class="divider-grey"/>                    
-                    <b-button type="submit" variant="primary">Submit</b-button>
-                    <b-button type="reset" variant="danger">Reset</b-button>
+                    <b-button type="button" variant="primary" @click="submitForm()">Submit</b-button>
+                    <b-button type="reset" variant="danger" @click="resetForm()">Reset</b-button>
                     </b-form>
                     </div>
                 </b-card>
@@ -69,7 +71,25 @@
 <script>
 export default {
   name: "layout-four",
-  components: {  }
+  components: {  },
+  data() {
+      return {
+          userId: '',
+          amount: '',
+      }
+  },
+  methods: {
+      submitForm() {
+          console.log(this.userId, this.amount);
+          let data = {userId: this.userId, amount: this.amount};
+          this.$appHttp.post("https://localhost:8080/v1/pay", data).subscribe(result => console.log(result));
+      },
+      resetForm() {
+          this.userId = '';
+          this.amount = '';
+      }
+      
+  }
 };
 </script>
 
