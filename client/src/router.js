@@ -28,6 +28,11 @@ export default new Router({
       component: () => import("./views/LayoutOne.vue")
     },
     {
+      path: "/login",
+      name: "login",
+      component: () => import("./views/Login.vue")
+    },
+    {
       path: "/layouts/layout-two",
       name: "layout-two",
       component: () => import("./views/LayoutTwo.vue")

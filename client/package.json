@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "postinstall": "cd node_modules/sjcl && ./configure --with-ecc && make sjcl.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -17,7 +18,8 @@
     "vue-chartjs": "^3.4.0",
     "vue-router": "^3.0.1",
     "vue-rx": "^6.1.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "sjcl": "https://github.com/bitwiseshiftleft/sjcl/tarball/master"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.3.0",

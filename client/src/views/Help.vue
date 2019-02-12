@@ -16,6 +16,7 @@
 
 <script>
 import HttpTest from "@/components/HttpTest.vue";
+import sjcl from "sjcl";
 
 export default {
   name: "help",
@@ -32,6 +33,14 @@ export default {
   },
   created() {
     this.resolve();
+    console.log(sjcl);
+    var keys = sjcl.ecc.ecdsa.generateKeys(256);
+    console.log(keys);
+    var ciphertext = sjcl.encrypt("password", "Hello World!");
+    var plaintext = sjcl.decrypt("password", ciphertext);
+
+    console.log(ciphertext);
+    console.log(plaintext);
   },
   updated() {
     /* questionable strategy, would rather only cache on nav, but it looks
