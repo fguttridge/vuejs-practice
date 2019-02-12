@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "principle": "user1",
+            "registeredKey" : {
+                "publicKey": "BCFTF33DeCTXOpbSQDDooFZvGH8KbC4iGOGhbL4IZt5u0xMOtzaLDJFHZNdEI7nh9KWUTfM3qV2Ne8opHReR7VA=",
+                "keyHandle": "STZotCVrLHGPJK3wE11oqNcBkEWG1+xb1M/srK1LKC5fpukzR8oZfp1UcENJn6DcE16qDminRISBOkNamglgQg==",
+                "certificate": "-----BEGIN CERTIFICATE-----\nMIIBNTCB3KADAgECAgsA4cuHWUK7mgJ3uDAKBggqhkjOPQQDAjAVMRMwEQYDVQQD\nEwpVMkYgSXNzdWVyMBoXCzAwMDEwMTAwMDBaFwswMDAxMDEwMDAwWjAVMRMwEQYD\nVQQDEwpVMkYgRGV2aWNlMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEgPxr0198\nSvLk0bzmeu9JGzT0cgs/TJTLTgj1VZq2hKSQ9FYOcDB7j3bZ5IPo/CiY3nh5oz5Q\nXl5xvByOwfyBL6MXMBUwEwYLKwYBBAGC5RwCAQEEBAMCBSAwCgYIKoZIzj0EAwID\nSAAwRQIhAMGjpo4vFqchRicFf2K7coyeA+ehumLQRlJORW0sLz9zAiALX3jlEaoY\nEp9vI22SEyJ9krTmft9T6BbfsF2dyLkP3g==\n-----END CERTIFICATE-----"
+            }
+        },
+        {
+            "principle": "user2",
+            "registeredKey": {
+                "publicKey": "BFmR0GLApriUj6nI4TvWP2aOvVWKbtfVKh8itYePCbkBauUDBr4hqu4G+cl6QcKLmpm4/sS6X/DVetjnAZKN218=",
+                "keyHandle": "QlHBoDeNg/ksm9L43HSkbMXu6AFYTwno/ctEtM6CVYu56Pkr5bCtXDj2ar9r/dOyrv44smEgJFEzmVohX/tudQ==",
+                "certificate": "-----BEGIN CERTIFICATE-----\nMIIBNDCB26ADAgECAgomQaX9CB6f4yajMAoGCCqGSM49BAMCMBUxEzARBgNVBAMT\nClUyRiBJc3N1ZXIwGhcLMDAwMTAxMDAwMFoXCzAwMDEwMTAwMDBaMBUxEzARBgNV\nBAMTClUyRiBEZXZpY2UwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAReviiVV9tj\nf4H8j0T2Dt3ZOpxlaAcLCE2xbw8cva2x+CW1XMdwd7wRchQ1lXwFEvePwSVRpvJJ\nNQi0leRW1caRoxcwFTATBgsrBgEEAYLlHAIBAQQEAwIFIDAKBggqhkjOPQQDAgNI\nADBFAiEAwaOmji8WpyFGJwV/YrtyjJ4D56G6YtBGUk5FbSwvP3MCIAtfeOURqhgS\nn28jbZITIn2StOZ+31PoFt+wXZ3IuQ/e\n-----END CERTIFICATE-----"
+            }
+        },
+        {
+            "principle": "user3",
+            "registeredKey": {
+                "publicKey": "BPG/2VjqN0238esyPhLfspoegpf9eXXztpldhqAb11yu7PYT3JoQlyJSH7ShuXoYoMzguPLCTXr56OEZkW8xoeQ=",
+                "keyHandle": "VmBjprWicp6bxzWYq22QV+8/fpdMiCyhZoJAedPuxzeEgyRJHJefic1tc7AlBTSfelUqT3vkQDpoWjzjUN17Ag==",
+                "certificate": "-----BEGIN CERTIFICATE-----\nMIIBNDCB26ADAgECAgotSGAr5BTyN4pwMAoGCCqGSM49BAMCMBUxEzARBgNVBAMT\nClUyRiBJc3N1ZXIwGhcLMDAwMTAxMDAwMFoXCzAwMDEwMTAwMDBaMBUxEzARBgNV\nBAMTClUyRiBEZXZpY2UwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR4RZUwTObs\nOevLDlyW0Izw86WOVfV6084OqzV8ktL+wrCCHA0VcTQHYLA0hxPCALiFW+BpxAgS\nzwr0xLszSwUfoxcwFTATBgsrBgEEAYLlHAIBAQQEAwIFIDAKBggqhkjOPQQDAgNI\nADBFAiEAwaOmji8WpyFGJwV/YrtyjJ4D56G6YtBGUk5FbSwvP3MCIAtfeOURqhgS\nn28jbZITIn2StOZ+31PoFt+wXZ3IuQ/e\n-----END CERTIFICATE-----"
+            }
+        },
+        {
+            "principle": "user4"
+        },
+        {
+            "principle": "user5"
+        }
+    ],
+    "extra": {
+        "1": "U2F_V2",
+        "2": "OKVj9DWQS7K0sK7gKanq1aQIXuwCwPj6iEDl5dFzYQA"
+    }
+
+}

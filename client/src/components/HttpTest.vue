@@ -15,6 +15,7 @@ export default {
   },
   mounted() {
       this.$appHttp.get('https://jsonplaceholder.typicode.com/users').subscribe(result => this.data = result);
+      this.$appHttp.get('https://localhost:8080/ping').subscribe(result => console.log(result));
   },
   beforeDestroy() {
     clearInterval(this.$options.interval);

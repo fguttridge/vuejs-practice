@@ -16,12 +16,20 @@
 
 <script>
 import HttpTest from "@/components/HttpTest.vue";
-import sjcl from "sjcl";
-
+import u2fServer from "node-u2flib-server";
+import u2f from "@/assets/js/u2f-api.js";
+import mockData from "../mocks/mockData.json";
 export default {
   name: "help",
   components: {
-    HttpTest
+    HttpTest,
+    u2f,
+    u2fServer
+  },
+  data () {
+    return {
+      mockData: mockData
+    }
   },
   methods: {
     storeState(url) {
@@ -33,15 +41,38 @@ export default {
   },
   created() {
     this.resolve();
-    console.log(sjcl);
-    var keys = sjcl.ecc.ecdsa.generateKeys(256);
-    console.log(keys);
-    var ciphertext = sjcl.encrypt("password", "Hello World!");
-    var plaintext = sjcl.decrypt("password", ciphertext);
-
-    console.log(ciphertext);
-    console.log(plaintext);
-  },
+    // console.log(u2f);
+    // console.log(this.mockData.users[0].registeredKey.keyHandle);
+    // var register = u2fServer.startRegistration("https://localhost:8080");
+    // var register = {
+    //   "version": "U2F_V2",
+    //   "appId": "https://localhost:8080",
+    //   "challenge": "Ysr24TmqJZjCXk58Hn-HBdZJArLyugqUAaaqKL05yy0"
+    // }
+    // console.log(register);
+    // var registrationResult = u2f.register(register.appId, [register], [], function(data) {
+    //         console.log(data);
+    //         let registerResult = u2fServer.finishRegistration(register, data);
+    //         console.log(registerResult);
+    //       }, 30);
+    // console.log(registrationResult);
+    var startAuthen = u2fServer.startAuthentication("https://localhost:8080", this.mockData.users[2].registeredKey);
+        startAuthen.challenge = "eyJyYW5kb20iOiAiZGF0YSIsICJvYmplY3QiOiAidmFsdWUifQ==";
+    var result = u2f.sign(startAuthen.appId, startAuthen.challenge,
+    [ {version: startAuthen.version, keyHandle: startAuthen.keyHandle} ],
+      function(data) {
+          console.log( "Calling u2f key to sign some data, place down finger...");
+          console.log(data);
+          let authentication = u2fServer.finishAuthentication(
+          startAuthen,
+          data,
+          this.mockData.users[2].registeredKey);
+          console.log("User Authenticated", authentication);
+      }.bind(this), 30)
+      console.log(result);
+      setTimeout( () => {
+      }, 5000);
+    },
   updated() {
     /* questionable strategy, would rather only cache on nav, but it looks
       like that would require router hooks */
